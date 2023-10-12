@@ -12,15 +12,15 @@ public:
 
 	void SetActive();
 
-	int GetWidth() const { return mWidth; }
-	int GetHeight() const { return mHeight; }
+	int GetWidth() const { return mwidth; }
+	int GetHeight() const { return mheight; }
 	void CreateFromSurface(SDL_Surface * s);
 private:
 
-	//these cariable names are straight stolen klmao
-	unsigned int mTextureID;
-	int mWidth;
-	int mHeight;
+
+	unsigned int mtexid;
+	int mwidth;
+	int mheight;
 
 
 };

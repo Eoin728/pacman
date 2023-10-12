@@ -5,9 +5,9 @@
 #include "SDL/SDL.h"
 
 Texture::Texture()
-	:mTextureID(0)
-	, mWidth(0)
-	, mHeight(0)
+	:mtexid(0)
+	, mwidth(0)
+	, mheight(0)
 {
 
 }
@@ -17,7 +17,7 @@ bool Texture::Load(const std::string& fileName)
 	int channels = 0;
 
 	unsigned char* image = SOIL_load_image(fileName.c_str(),
-		&mWidth, &mHeight, &channels, SOIL_LOAD_AUTO);
+		&mwidth, &mheight, &channels, SOIL_LOAD_AUTO);
 
 	if (image == nullptr)
 	{
@@ -31,15 +31,14 @@ bool Texture::Load(const std::string& fileName)
 		format = GL_RGBA;
 	}
 
-	glGenTextures(1, &mTextureID);
-	glBindTexture(GL_TEXTURE_2D, mTextureID);
+	glGenTextures(1, &mtexid);
+	glBindTexture(GL_TEXTURE_2D, mtexid);
 
-	glTexImage2D(GL_TEXTURE_2D, 0, format, mWidth, mHeight, 0, format,
+	glTexImage2D(GL_TEXTURE_2D, 0, format, mwidth, mheight, 0, format,
 		GL_UNSIGNED_BYTE, image);
 
 	SOIL_free_image_data(image);
 
-	// Enable linear filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
@@ -48,23 +47,23 @@ bool Texture::Load(const std::string& fileName)
 
 void Texture::Unload()
 {
-	glDeleteTextures(1, &mTextureID);
+	glDeleteTextures(1, &mtexid);
 }
 
 void Texture::SetActive()
 {
-	glBindTexture(GL_TEXTURE_2D, mTextureID);
+	glBindTexture(GL_TEXTURE_2D, mtexid);
 }
 
 void Texture::CreateFromSurface(SDL_Surface* s)
 {
-	mWidth = s->w;
-	mHeight = s->h;
+	mwidth = s->w;
+	mheight = s->h;
 
 
-	glGenTextures(1, &mTextureID);
-	glBindTexture(GL_TEXTURE_2D, mTextureID);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mWidth, mHeight, 0, GL_BGRA,
+	glGenTextures(1, &mtexid);
+	glBindTexture(GL_TEXTURE_2D, mtexid);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, mwidth, mheight, 0, GL_BGRA,
 	GL_UNSIGNED_BYTE, s->pixels);
 
 	
