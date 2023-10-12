@@ -1,0 +1,112 @@
+﻿  AABBcomp.cpp
+  Actor.cpp
+  CapsuleComp.cpp
+  Collectible.cpp
+  CollisionTime.cpp
+  Component.cpp
+  EndScreen.cpp
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Fruit.cpp
+  Game.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Game.cpp(63,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Game.cpp(63,29): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Game.cpp(71,23): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Game.cpp(158,23): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
+  Ghost.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(68,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(68,126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(80,84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(80,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(169,84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ghost.cpp(169,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Hud.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Hud.cpp(59,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Input.cpp
+  main.cpp
+  Math.cpp
+  Maze.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(81,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(107,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(107,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(186,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(186,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(192,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(192,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(199,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(199,40): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(204,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(204,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(305,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(305,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(313,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(313,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(331,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(331,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(337,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Maze.cpp(337,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Mesh.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  MeshComponent.cpp
+  Movement.cpp
+  Paccam.cpp
+  Pacman.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(59,15): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(63,15): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(67,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(71,16): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(76,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(77,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(175,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(180,24): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(38): warning C4172: returning address of local variable or temporary
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(37): warning C4172: returning address of local variable or temporary
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(37): warning C4172: returning address of local variable or temporary
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(38): warning C4172: returning address of local variable or temporary
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(37): warning C4172: returning address of local variable or temporary
+C:\Users\eoini\source\repos\Project8\Project8\Actor.h(38): warning C4172: returning address of local variable or temporary
+  Compiling...
+  PauseMenu.cpp
+C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(15,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(15,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(19,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(19,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Pellet.cpp
+  Projectile.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Projectile.cpp(30,84): warning C4305: 'argument': truncation from 'double' to 'float'
+  Renderer.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(17,1): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(198,85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(198,70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Shader.cpp
+  SphereComp.cpp
+  Startscreen.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Startscreen.cpp(14,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Startscreen.cpp(16,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Text.cpp
+  Texture.cpp
+  Tile.cpp
+  Ui.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(40,16): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(40,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(41,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(41,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(93,46): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(94,47): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(98,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(98,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Vertexarray.cpp
+  Wall.cpp
+  Generating Code...
+SOIL.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(image_DXT.obj)' or at ''; linking object as if no debug info
+SOIL.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(image_helper.obj)' or at ''; linking object as if no debug info
+SOIL.lib(SOIL.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(SOIL.obj)' or at ''; linking object as if no debug info
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(stb_image_aug.obj)' or at ''; linking object as if no debug info
+  Project8.vcxproj -> C:\Users\eoini\source\repos\Project8\Debug\Project8.exe
