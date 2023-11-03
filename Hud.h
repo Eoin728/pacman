@@ -8,8 +8,6 @@ public:
 	~Hud();
 	void Draw(class Shader*) override;
 
-	void Update() override;
-
 	void SwitchDrawCrosshair() { mdrawcrosshair = !mdrawcrosshair; }
 private:
 	class Texture* mrockcounter;

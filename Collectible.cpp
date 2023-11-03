@@ -8,9 +8,8 @@
 
 #include "Maze.h"
 
-Collectible::Collectible(class Game* g) :Actor{ g }
+Collectible::Collectible(class Game* g) :Actor{ g },msphere{nullptr}
 {
-	//g->GetColl()->AddCollectible(this);
 }
 
 void Collectible::ActorUpdate(float del)

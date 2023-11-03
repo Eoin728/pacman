@@ -9,7 +9,7 @@ public:
 	void ActorUpdate(float d) override;
 
 private:
-	//once again i propose adding this to actor
+	
 	class Movement* mmovie;
 
 	float timer;

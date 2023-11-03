@@ -34,6 +34,8 @@ Ghost::Ghost(class Game* a):Actor{a},timer{1},mlast{nullptr},maxlength{5},mishun
 	
 	mcapsule = new CapsuleComp(this,10 *  ((me->GetAABB().mmax.y - me->GetAABB().mmin.y) / 2),wallsize);
 	mmovie->SetForward(40.0f);
+
+	mprev = GetCurrTile();
 }
 
 Ghost::~Ghost()
@@ -44,7 +46,6 @@ Ghost::~Ghost()
 
 void Ghost::ActorUpdate(float delta)
 {
-	
 	timer += delta;
 	if (Centered())
 	{
@@ -78,10 +79,11 @@ void Ghost::Patrol(float& delta)
 		mmovie->SetForward(40.0f);
 		timer = 0;
 		SetPosition(Vector3(GetTileX() * GetGame()->GetMaze()->GetTileSize(), GetTileY() * GetGame()->GetMaze()->GetTileSize(), 0.0f));
-	
+		
 
 		//this perhaps could be revised
 		Tile* t = GetCurrTile();
+***REMOVED***
 		Tile* node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
 		if (node == mlast)
 			node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
@@ -90,75 +92,88 @@ void Ghost::Patrol(float& delta)
 		if (node == mlast)
 			node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
 
+		//name is bad
+		mprev->mghost = nullptr;
+		GetCurrTile()->mghost = this;
+		mprev = GetCurrTile();
 
 		SetFacingDir(node, t);
 	}
 }
 
-bool cmp(Tile* a, Tile* b)
-{
-	return a->GetPathCost() > b->GetPathCost();
-}
 
+#include <iostream>
 int Ghost::Range()
 {
 
-
-	int i{ 0 };
-	Tile* start{ GetGame()->GetPac()->GetCurrTile()};
-
-	Tile* end{ GetCurrTile() };
-	struct scar
+	const int maxpathlen = 5;
+	struct info
 	{
-		Tile* parent = nullptr;
-		int num = 0;
+		int pathlen;
+		int heuristic;
+		Tile* prev;
 	};
-	scar x;
-	std::unordered_map<Tile*, scar> mp;
-	Tile* curr;
-	mp.emplace(start, x);
-	std::queue<Tile*> q;
-	q.emplace(start);
-	while (!q.empty())
+
+	std::unordered_map<Tile*, info> mp;
+	auto cmp = [&mp](Tile* a, Tile* b)
 	{
-		curr = q.front();
-		q.pop();
+		return mp[a].pathlen > mp[b].pathlen;
+	};
+	std::priority_queue< Tile*, std::vector < Tile*>, decltype(cmp)> pq(cmp);
+
+	Tile* start = GetGame()->GetPac()->GetCurrTile();
+	Tile* end = GetCurrTile();
+	Tile* curr;
+
+	auto calculateheuristic = [end](Tile * other)
+	{
+		return (1);
+	};
+	info x;
+	x.pathlen = 0;
+	x.heuristic = calculateheuristic(start);
+	x.prev = end;
+	mp.emplace(start, x);
+
+	bool chkr[100][100] = { {false} };
+	chkr[start->GetX()][start->GetY()] = true;
+	pq.push(start);
+	while (!pq.empty())
+	{
+		std::cout << "thaiboy";
+		curr = pq.top();
+		pq.pop();
+
 		if (curr == end)
 		{
-
-			mhuntnext = mp[curr].parent;
-			
-			return x.num;
+			mhuntnext = mp[curr].prev;
+			return 1;
 		}
-		for (auto child : curr->GetAdjacent())
+		if (mp[curr].pathlen > maxpathlen)
 		{
-
-			if (mp.find(child) == mp.end())
-			{
-
-
-				x.parent = curr;
-				x.num = mp.find(curr)->second.num + 1;
-				if (x.num > maxlength)
-				{
-					return -1;
-				}
-				mp.emplace(child, x);
-				q.emplace(child);
-			}
-
-
-
+		
+			return -1;
 		}
 
+		for (auto adj : curr->GetAdjacent())
+		{
+			if (!chkr[adj->GetX()][adj->GetY()])
+			{
+				chkr[adj->GetX()][adj->GetY()] = true;
+				info xx;
+				xx.pathlen = mp[curr].pathlen + 1;
+				x.heuristic = calculateheuristic(adj);
+				xx.prev = curr;
+				mp.emplace(adj, xx);
+				pq.push(adj);
+			}
+		}
 
 
 	}
-
-	return -1;
-
+	std::cout << "Yo";
+			return -1;
 }
-
 void Ghost::Hunt(float delta)
 {
 	if (timer > 0.1)
@@ -173,6 +188,8 @@ void Ghost::Hunt(float delta)
 
 }
 
+
+//is this bad? idk
 void Ghost::SetFacingDir( Tile * node,  Tile *t)
 {
 	Quaternion q;

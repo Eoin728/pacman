@@ -1,16 +1,9 @@
 #include "Game.h"
 #include "Renderer.h"
-#include "Actor.h"
 #include "SDL/SDL.h"
-#include "MeshComponent.h"
-#include "Mesh.h"
-
-#include "Wall.h"
 #include "Maze.h"
 #include "Pacman.h"
-#include "Ghost.h"
 #include "Input.h"
-#include "Collectible.h"
 #include "Tile.h"
 #include "PauseMenu.h"
 #include <SDL/SDL_ttf.h>
@@ -39,10 +32,6 @@ void Game::LoadData()
 
    
 }
-
-
-//do i need mhud
-
 Game::Game():misrunning{true},misupdatingactors{false},mticks{0},mRenderer{nullptr},mstate{Game::NotPaused},mMaze{nullptr},mpac{nullptr},minput{nullptr},mhud{nullptr}
 {
 	

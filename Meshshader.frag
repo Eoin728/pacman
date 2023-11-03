@@ -12,7 +12,7 @@ uniform vec3 uambient;
 
 uniform float uspecpower;
 
-//uniform lightstruct ulight;
+
 
 
 in vec3 fragworldpos;

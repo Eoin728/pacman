@@ -1,11 +1,8 @@
 
-//no shot all these are needed
 #include "Pacman.h"
 #include "Paccam.h"
 #include "Movement.h"
-#include "SDL/SDL.h"
 #include "Game.h"
-
 #include "SphereComp.h"
 #include "Renderer.h"
 #include "Mesh.h"
@@ -13,21 +10,17 @@
 #include "AABBcomp.h"
 #include "Wall.h"
 #include "Maze.h"
-#include "Tile.h"
-#include <functional>
-#include <queue>
 #include "Ghost.h"
 #include "Input.h"
 #include "CapsuleComp.h"
 #include "Projectile.h"
-#include "Random.h"
 #include "Hud.h"
 #include "EndScreen.h"
 
 
 Pacman::Pacman(class Game* g) :Actor{ g },mspeed{250},mrockcount{0}, mpelletcount{0}
 {
-	SetScale(30.0f);
+	SetScale(25.0f);
 	mcam = new Paccam(this);
 	mmovie = new Movement(this);
 	 mpacmodel = new MeshComp(this);
@@ -136,7 +129,7 @@ void Pacman::ActorUpdate(float)
 {
 	
 	wallhit();
-
+	//DetectGhosts();
 	//do collisions with ghosts
 	CheckGhostColl();
 
@@ -249,5 +242,44 @@ class Tile* Pacman::GetCurrTile()
 	yyy /= GetGame()->GetMaze()->GetTileSize();
 	
 	return GetGame()->GetMaze()->GetTiles()[xxx][yyy];
+
+}
+#include "Tile.h"
+#include <queue>
+#include <iostream>
+
+void Pacman::DetectGhosts()
+{
+	Tile* start = GetCurrTile();
+	std::queue<Tile*> q;
+	std::unordered_map<Tile*, int> pq;
+	pq.emplace(start, 0);
+	q.push(start);
+	
+	bool closed[100][100] = { {false} };
+	closed[start->GetX()][start->GetY()];
+	while (!q.empty() && pq[q.front()] < 5)
+	{
+		start = q.front();
+	
+		q.pop();
+		for (auto adj : start->GetAdjacent())
+		{
+			if (adj->GetGhost())
+			{
+				//adj->GetGhost()->SetHunting(true);
+			}
+			if (!closed[adj->GetX()][adj->GetY()])
+			{
+				pq.emplace(adj, pq[start] + 1);
+				q.push(adj);
+				closed[adj->GetX()][adj->GetY()] = true;
+			}
+		}
+
+
+	}
+	
+	
 
 }

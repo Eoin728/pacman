@@ -21,6 +21,8 @@ void AABBcomp::OnWorldTransform()
 
 AABBcomp::AABBcomp(class Wall* p,const Quaternion& rot,const Vector3& pos)
 {
+
+	//can i just get wall coordinates from this?
 	mworld = p->GetGame()->GetRenderer()->GetMesh("Assets/Wall.txt")->GetAABB();
 	
 	mworld.mmax = p->GetScale() * mworld.mmax;

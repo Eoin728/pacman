@@ -12,10 +12,7 @@ SphereComp::SphereComp(class Actor* a,float x):Component{a}
 
 void SphereComp::Update(float delta)
 {
-	
 	msphere.mCentre = mOwner->GetPos();
-	
-
 }
 
 

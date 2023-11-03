@@ -1,48 +1,18 @@
-﻿  EndScreen.cpp
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(21,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\EndScreen.cpp(26,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Hud.cpp
-C:\Users\eoini\source\repos\Project8\Project8\Hud.cpp(59,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Mesh.cpp
-C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Mesh.cpp(72,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  MeshComponent.cpp
-  PauseMenu.cpp
-C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(15,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(15,57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(19,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\PauseMenu.cpp(19,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Renderer.cpp
-C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(17,1): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(198,85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Renderer.cpp(198,70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Shader.cpp
-  Startscreen.cpp
-C:\Users\eoini\source\repos\Project8\Project8\Startscreen.cpp(14,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Startscreen.cpp(16,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Text.cpp
-  Texture.cpp
-  Ui.cpp
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(40,16): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(40,16): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(41,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(41,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(93,46): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(94,47): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(98,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\eoini\source\repos\Project8\Project8\Ui.cpp(98,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Vertexarray.cpp
+﻿  Pacman.cpp
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(52,15): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(56,15): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(60,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(64,16): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(69,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(70,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(168,24): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\eoini\source\repos\Project8\Project8\Pacman.cpp(173,24): warning C4305: 'argument': truncation from 'double' to 'float'
 SOIL.lib(SOIL.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  2 of 2326 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 2255 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    13 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
 SOIL.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(image_DXT.obj)' or at ''; linking object as if no debug info
 SOIL.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'SOIL.lib(image_helper.obj)' or at ''; linking object as if no debug info

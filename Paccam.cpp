@@ -30,7 +30,7 @@ void Paccam::Update(float delta)
 	
 }
 
-ThirdCam::ThirdCam(class Actor*a):Paccam{a},mfordis{20},mbackdis{40},mupdis{115}
+ThirdCam::ThirdCam(class Actor* a) :Paccam{ a }, mfordis{ 20 }, mbackdis{ 40 }, mupdis{ 300 }//mupdis{115}
 {
 
 }

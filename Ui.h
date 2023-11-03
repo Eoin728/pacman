@@ -43,7 +43,6 @@ public:
 
 	virtual void Draw(class Shader*);
 	virtual void ProcessInput(const class Input& state);
-	virtual void Update();
 
 	void AddInteract(class Interact* i);
 

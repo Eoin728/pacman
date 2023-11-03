@@ -79,6 +79,8 @@ void Actor::UpdateComponents(float delta)
 	}
 }
 
+
+//not sure if these are neede here
 int Actor::GetTileX() { return static_cast<int>(GetPos().x / GetGame()->GetMaze()->GetTileSize()); }
 int Actor::GetTileY() { return static_cast<int>(GetPos().y / GetGame()->GetMaze()->GetTileSize()); }
 

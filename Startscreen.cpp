@@ -32,7 +32,6 @@ Startscreen::Startscreen(class Game*g):Ui{g},mmessage{nullptr}
 Startscreen::~Startscreen()
 {
 	mgame->SetState(Game::NotPaused);
-	
 }
 
 void Startscreen::ProcessInput(const class Input& state)

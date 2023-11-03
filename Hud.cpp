@@ -8,7 +8,7 @@ Hud::Hud(class Game* g):Ui{g},mdrawcrosshair(true),mrockcounter{0},mpelletcounte
 {
 	mcrosshair = new Texture();
 	mcrosshair->Load("Assets/Crosshair.png");
-	//mtexs.emplace_back(mcrosshair);
+
 	mrocksymbol = new Texture();
 	mrocksymbol->Load("Assets/rockhud.png");
 
@@ -64,13 +64,4 @@ void Hud::Draw(class Shader* s)
 	 Drawhelper(mpelletsymbol, g, s);
 
 	
-}
-
-//is this needed?
-
-void Hud::Update()
-{
-	//uppdate rock count
-	
-	//update pellet count
 }

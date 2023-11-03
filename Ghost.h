@@ -9,8 +9,10 @@ public:
 	~Ghost();
 	void ActorUpdate(float delta) override;
 	
+	//is this ever used
 	void SetHuntNext(class Tile* x) { mhuntnext = x; }
 	bool IsHunting() { return mishunting; }
+	void SetHunting(bool g) { mishunting = g; }
 
 	class CapsuleComp* GetCapsule() { return mcapsule; }
 protected:
@@ -33,4 +35,6 @@ protected:
 	float timer;
 
 	class CapsuleComp* mcapsule;
+
+	class Tile* mprev;
 };

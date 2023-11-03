@@ -82,6 +82,7 @@ float mat[4][4] =
 
 
 mSpriteShader->SetMatrixUniform("uviewproj", Matrix4(mat));
+glEnable(GL_TEXTURE_2D); glEnable(GL_BLEND); glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 for (auto y : mgame->GetUis())
 {
 
@@ -197,11 +198,6 @@ bool Renderer::LoadShaders()
 	mview = Matrix4::CreateView(Vector3(1,0,4000), Vector3(0,0,3900), Vector3::UnitZ);
 	mproj = Matrix4::CreateProj(10.0f, 10000.0f,Math::ToRadians(70.0f), mScreenHeight, mScreenWidth);
 	
-
-
-
-	//mview = Matrix4(mat);
-	//mview.mat[3][2] = -300000;
 
 
 

@@ -18,9 +18,12 @@ public:
 	const bool Yoveradj() { return yoveradj; }
 	const bool Yunderadj() { return yunderadj; }
 
-	
+	void SetGhost(class Ghost* g) { mghost = g; }
+		class Ghost* GetGhost() { return mghost; }
 
 	void SetCollectible(class Collectible* c) { mcollectible = c; }
+	//debugginh
+	class Collectible* GetCollectible() { return mcollectible; }
 
 	int GetPathCost() { return mpathlen; }
 private:
@@ -36,4 +39,6 @@ private:
 	Tile* mprev;
 
 	int x, y;
+
+	class Ghost* mghost;
 };

@@ -15,6 +15,7 @@ public:
 	int GetRockCount() const { return mrockcount; }
 	void AddRock();
 	friend class Hud;
+	void DetectGhosts();
 
 	class Tile* GetCurrTile() override;
 private:
