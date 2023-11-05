@@ -15,7 +15,7 @@ Collectible::Collectible(class Game* g) :Actor{ g },msphere{nullptr}
 void Collectible::ActorUpdate(float del)
 {
 	
-	
+	asdfafas
 	msphere->GetSphere();
 
 	if (Intersect(msphere->GetSphere()
