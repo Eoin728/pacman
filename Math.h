@@ -4,7 +4,7 @@
 #include <limits>
 namespace Math
 {
-	const float Pi = 3.1415926535f;
+	const float Pi = 3.14159265358979323846f;
 	const float HalfPi = Pi / 2.0f;
 	const float Infinity = std::numeric_limits<float>::infinity();
 	const float NegInfinity = -std::numeric_limits<float>::infinity();
@@ -236,7 +236,7 @@ public:
 	friend Matrix4 operator*(const Matrix4& a, const Matrix4& b)
 	{
 			Matrix4 retVal;
-			// row 0
+			
 			retVal.mat[0][0] =
 				a.mat[0][0] * b.mat[0][0] +
 				a.mat[0][1] * b.mat[1][0] +
@@ -261,7 +261,7 @@ public:
 				a.mat[0][2] * b.mat[2][3] +
 				a.mat[0][3] * b.mat[3][3];
 
-			// row 1
+		
 			retVal.mat[1][0] =
 				a.mat[1][0] * b.mat[0][0] +
 				a.mat[1][1] * b.mat[1][0] +
@@ -286,7 +286,7 @@ public:
 				a.mat[1][2] * b.mat[2][3] +
 				a.mat[1][3] * b.mat[3][3];
 
-			// row 2
+		
 			retVal.mat[2][0] =
 				a.mat[2][0] * b.mat[0][0] +
 				a.mat[2][1] * b.mat[1][0] +
@@ -311,7 +311,7 @@ public:
 				a.mat[2][2] * b.mat[2][3] +
 				a.mat[2][3] * b.mat[3][3];
 
-			// row 3
+			
 			retVal.mat[3][0] =
 				a.mat[3][0] * b.mat[0][0] +
 				a.mat[3][1] * b.mat[1][0] +

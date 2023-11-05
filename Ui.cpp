@@ -66,8 +66,7 @@ void Ui::Drawhelper(Texture * t,Vector3& a,class Shader* s)
 void Ui::Draw(class Shader* s)
 {
 
-	//do this once in renderer maybe?
-//	glEnable(GL_TEXTURE_2D); glEnable(GL_BLEND); glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 
 	for (auto x : minteracts)
 	{
@@ -97,7 +96,7 @@ void Ui::ProcessInput(const class Input& state)
 	x -= mgame->GetRenderer()->GetScreenWidth() * 0.5;
 	y -= mgame->GetRenderer()->GetScreenHeight() * 0.5f; 
 	
-	//WTF IS THIS
+	
 	y *= -1;
 
 	for (auto g : minteracts)

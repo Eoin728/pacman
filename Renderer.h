@@ -32,14 +32,11 @@ public:
 	void AddWall(class Wall*);
 	void RemoveWall(class Wall*);
 
-	//not sure if these are ever used
-	void AddTile(class Tile*);
-	void RemoveTile(class Tile*);
 
 	void SetWallColour(const Vector3& v) { mwallcolour = v;  }
 	
 	
-	//nice name
+
 	Vector3 GetTrueCentreScreenPos(const Vector3& a = Vector3::Zero);
 	const int GetScreenWidth() const { return mScreenWidth; }
 	const int GetScreenHeight() const { return mScreenHeight; }
@@ -67,9 +64,7 @@ private:
 	class Game* mgame;
 
 
-
 	//walls
-	//doing to much here with these walls this is becoming even more and more reata
 	std::vector<class Wall*> mwalls;
 	class Shader* mWallShader;
 	Vector3 mwallcolour;

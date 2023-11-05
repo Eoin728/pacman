@@ -10,14 +10,13 @@
 Endscreen::Endscreen(class Game* g,State condition):Ui{g}
 {
 
-	//this is so bloated
+	
 	g->SetState(Game::Paused);
 	Texture* t;
 
 	t = mtexty->GetText("play again", mmenucolour);
 
-***REMOVED***
-***REMOVED***
+	
 	new Interact(this,Vector3(-minteractwidth * 0.5, 0, 0), Vector3(minteractwidth, minteractheight, 0), t, [this]() {SetState(Ui::Dead); mgame->GetMaze()->MakeMazeItems(); new Startscreen(mgame); });
 	
 	

@@ -28,9 +28,8 @@ const Vector3 Vector3::UnitX = Vector3(1.0f, 0.0f, 0.0f);
 
  }
 
-***REMOVED***
-***REMOVED***
- Vector3 Vector3::Transform(const Vector3& vec, const Matrix4& mat, float w /*= 1.0f*/)
+
+ Vector3 Vector3::Transform(const Vector3& vec, const Matrix4& mat, float w)
  {
 	 Vector3 retVal;
 	 retVal.x = vec.x * mat.mat[0][0] + vec.y * mat.mat[1][0] +
@@ -49,42 +48,39 @@ const Vector3 Vector3::UnitX = Vector3(1.0f, 0.0f, 0.0f);
 	 return retVal;
  }
 
- //fr i went thru and made this myself frfrfrfr
+
  void Matrix4::Invert()
  {
-***REMOVED***
-***REMOVED***
+
 	 float tmp[12];
 	 float src[16];
 	 float dst[16];
 	 float det;
 
-	 // Transpose matrix
-	 // row 1 to col 1
+
 	 src[0] = mat[0][0];
 	 src[4] = mat[0][1];
 	 src[8] = mat[0][2];
 	 src[12] = mat[0][3];
 
-	 // row 2 to col 2
 	 src[1] = mat[1][0];
 	 src[5] = mat[1][1];
 	 src[9] = mat[1][2];
 	 src[13] = mat[1][3];
 
-	 // row 3 to col 3
+
 	 src[2] = mat[2][0];
 	 src[6] = mat[2][1];
 	 src[10] = mat[2][2];
 	 src[14] = mat[2][3];
 
-	 // row 4 to col 4
+
 	 src[3] = mat[3][0];
 	 src[7] = mat[3][1];
 	 src[11] = mat[3][2];
 	 src[15] = mat[3][3];
 
-	 // Calculate cofactors
+
 	 tmp[0] = src[10] * src[15];
 	 tmp[1] = src[11] * src[14];
 	 tmp[2] = src[9] * src[15];
@@ -145,17 +141,16 @@ const Vector3 Vector3::UnitX = Vector3(1.0f, 0.0f, 0.0f);
 	 dst[15] = tmp[10] * src[10] + tmp[4] * src[8] + tmp[9] * src[9];
 	 dst[15] -= tmp[8] * src[9] + tmp[11] * src[10] + tmp[5] * src[8];
 
-	 // Calculate determinant
+
 	 det = src[0] * dst[0] + src[1] * dst[1] + src[2] * dst[2] + src[3] * dst[3];
 
-	 // Inverse of matrix is divided by determinant
+
 	 det = 1 / det;
 	 for (int j = 0; j < 16; j++)
 	 {
 		 dst[j] *= det;
 	 }
 
-	 // Set it back
 	 for (int i = 0; i < 4; i++)
 	 {
 		 for (int j = 0; j < 4; j++)

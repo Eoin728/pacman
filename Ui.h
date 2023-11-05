@@ -6,9 +6,7 @@
 #include <functional>
 
 
-//perhaps do not use vectors for pos and stuff
-// or maybe make a 2d vector class idk
-//the name for this is terrible
+
 class Interact
 {
 public:
@@ -61,7 +59,7 @@ protected:
 	class Text* mtexty;
 	State mstate;
 
-	//colours
+
 	const Vector3 mmenucolour = Vector3(255, 140, 0.0f);
 
 	int minteractheight;

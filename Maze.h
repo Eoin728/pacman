@@ -27,11 +27,11 @@ private:
 	void MakeWalls();
 	void MakeMaze(class Tile* curr);
 	void CreateAdjacent(int i,int j);
-	***REMOVED***
+	
 	  int mtilesize;
 
-	  //this maybe not needed
-	  std::vector<class Fruit*> mfruits;
+	
+	 std::vector<class Fruit*> mfruits;
 
 	std::array<std::array<class Tile*,mtilenum>,mtilenum> mtiles;
 	const int mfruitnum{ 20 };

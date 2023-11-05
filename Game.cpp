@@ -39,7 +39,7 @@ Game::Game():misrunning{true},misupdatingactors{false},mticks{0},mRenderer{nullp
 bool Game::Initialize()
 {
 
-***REMOVED***
+	
 
 	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0)
 	{

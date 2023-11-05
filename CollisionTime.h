@@ -48,8 +48,5 @@ bool Intersect(const AABB& a, const Sphere& s);
 //pacman with collectible
 bool Intersect(const Sphere& a, const Sphere& b);
 
-//rock or pacman with ghost
-//bool Intersect(const Sphere& s, const Capsule& c);
 
-//
 bool Intersect(const Sphere& s, const Capsule& c);

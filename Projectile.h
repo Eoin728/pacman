@@ -14,7 +14,7 @@ private:
 
 	float timer;
 
-	//maybe add the meshcomp to actor??
+
 	class MeshComp* mmeshcomp;
 
 	class SphereComp* msphere;

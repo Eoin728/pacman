@@ -3,7 +3,7 @@
 #include "SDL/SDL.h"
 
 #include "Math.h"
-***REMOVED***
+
 
 class Input
 {
@@ -23,9 +23,6 @@ public:
 	void UpdatePrev();
 	State GetMouseButtonState(int x) const;
 
-	
-
-	//maybe actually set it here centralise and that
 	void SetMouseRelative(bool x) { ismouserelative = x; }
 private:
 

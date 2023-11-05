@@ -8,7 +8,6 @@
 #include "Pacman.h"
 #include "Maze.h"
 
-***REMOVED***
 
 Fruit::Fruit(class Game*g):Collectible{g}
 {

@@ -96,17 +96,7 @@ bool AABB::IsLeftOrDown(const Vector3& a) const
 	return mmin.x > a.x || mmin.y > a.y;
 }
 
-//assumes ghost and pacman on same plane,ghost must be straight up
-/*
-bool Intersect(const Sphere& s, const Capsule& c)
-{
-	Vector3 centdiff((s.mCentre.x - c.mline.mend.x), (s.mCentre.y - c.mline.mend.y), 0.0f);
-	
-	float radiidiff = (s.mRadius + c.mradius) * (s.mRadius + c.mradius);
-	return (centdiff.LengthSq() < radiidiff);
-	
-}
-*/
+
 bool Intersect(const Sphere& s, const Capsule& c)
 {
 	float radii = (s.mRadius + c.mradius) * (s.mRadius + c.mradius);

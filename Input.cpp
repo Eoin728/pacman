@@ -46,9 +46,7 @@ void Input::Update()
 	
 	mCurrState = SDL_GetKeyboardState(NULL);
 
-	//perhaps get x and y here idk
 
-	//also try using get relative mouse mode function
 	if (ismouserelative)
 		mcurrmouse = SDL_GetRelativeMouseState(nullptr, nullptr);
 	else

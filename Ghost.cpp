@@ -22,7 +22,7 @@ Ghost::Ghost(class Game* a):Actor{a},timer{1},mlast{nullptr},maxlength{5},mishun
 	mlast = GetGame()->GetMaze()->GetTiles()[GetTileX()][GetTileY()];
 	AABB tmp = me->GetAABB();
 
-	***REMOVED***
+
 	float wallsize = Math::Max(tmp.mmax.y - tmp.mmin.y, tmp.mmin.y - tmp.mmax.y);
 
 	float w2 = Math::Max(tmp.mmax.x - tmp.mmin.x, tmp.mmin.x - tmp.mmax.x);
@@ -81,18 +81,19 @@ void Ghost::Patrol(float& delta)
 		SetPosition(Vector3(GetTileX() * GetGame()->GetMaze()->GetTileSize(), GetTileY() * GetGame()->GetMaze()->GetTileSize(), 0.0f));
 		
 
-		//this perhaps could be revised
+		
 		Tile* t = GetCurrTile();
-***REMOVED***
-		Tile* node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
-		if (node == mlast)
-			node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
-		if (node == mlast)
-			node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
-		if (node == mlast)
-			node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
 
-		//name is bad
+		Tile* node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
+		if (t->GetAdjacent().size() > 1)
+		{
+			while (node == mlast)
+			{
+				node = t->GetAdjacent()[Random::get(0, static_cast<int>(t->GetAdjacent().size() - 1))];
+			}
+
+		}
+	
 		mprev->mghost = nullptr;
 		GetCurrTile()->mghost = this;
 		mprev = GetCurrTile();
@@ -102,7 +103,7 @@ void Ghost::Patrol(float& delta)
 }
 
 
-#include <iostream>
+
 int Ghost::Range()
 {
 
@@ -140,7 +141,6 @@ int Ghost::Range()
 	pq.push(start);
 	while (!pq.empty())
 	{
-		std::cout << "thaiboy";
 		curr = pq.top();
 		pq.pop();
 
@@ -171,7 +171,7 @@ int Ghost::Range()
 
 
 	}
-	std::cout << "Yo";
+
 			return -1;
 }
 void Ghost::Hunt(float delta)
@@ -189,14 +189,14 @@ void Ghost::Hunt(float delta)
 }
 
 
-//is this bad? idk
+
 void Ghost::SetFacingDir( Tile * node,  Tile *t)
 {
 	Quaternion q;
 	if ((t->GetX() < node->GetX()))
 	{
 		
-		q = Quaternion(Vector3::UnitZ, Math::Pi);
+
 
 		SetRotation(Quaternion(Vector3::UnitX, Math::HalfPi));
 		mlast = t;
@@ -210,7 +210,7 @@ void Ghost::SetFacingDir( Tile * node,  Tile *t)
 	{
 
 	
-		q = Quaternion(Vector3::UnitZ, -Math::HalfPi);
+	
 		SetRotation(Quaternion(Vector3::UnitZ, Math::HalfPi) * Quaternion(Vector3::UnitX, Math::HalfPi));
 		mlast = t;
 
@@ -218,7 +218,7 @@ void Ghost::SetFacingDir( Tile * node,  Tile *t)
 	else if ((t->GetY() > node->GetY()))
 	{
 		
-		q = Quaternion(Vector3::UnitZ, Math::HalfPi);
+
 		SetRotation(Quaternion(Vector3::UnitZ, -Math::HalfPi) * Quaternion(Vector3::UnitX, Math::HalfPi));
 		mlast = t;
 	}

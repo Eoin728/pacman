@@ -14,7 +14,7 @@ Pellet::Pellet(class Game*g) :Collectible{ g }
 	SetRotation(q);
 	Mesh* m = new Mesh();
 	m->Load("Assets/DUBE.txt", GetGame()->GetRenderer());
-	//	m->Load("Assets/Sphere.gpmesh", GetGame()->GetRenderer());
+	
 	float r = m->GetRadius() * GetScale();
 	MeshComp* mc = new MeshComp(this);
 	mc->SetMesh(m);

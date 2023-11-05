@@ -34,8 +34,6 @@ void Hud::Draw(class Shader* s)
 	Vector3 h;
 
 	//draw crosshair
-
-	//this needs to be changed entire class popped and unpopped every time switch person modes 
 	if (mdrawcrosshair)
 	{
 		Drawhelper(mcrosshair, h, s);
@@ -53,7 +51,7 @@ void Hud::Draw(class Shader* s)
 
 
 
-	 //draw the rockcunt amount of rocks fior visual representation
+	 //draw the rockcount amount of rocks for visual representation
 	 for (int i{ 0 }; i < a; i++)
 	 {
 		 g = Vector3(-300 + 8 * i, -300, 0);

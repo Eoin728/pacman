@@ -21,7 +21,7 @@ bool Text::Load(const std::string& s,int size)
 	return true;
 }
 
-//this 
+
 void Text::Unload()
 {
 	TTF_CloseFont(mfont);

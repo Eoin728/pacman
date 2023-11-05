@@ -12,20 +12,17 @@
 #include "Ghost.h"
 
 
-//ambient between 0 and 1 i think maybe doybkle check idk 
 Renderer::Renderer(class Game* v) :mgame{ v }, mwallcolour(Vector3::UnitZ),mambient{Vector3(0.0,0.1,0.2)},mlightdir(Vector3(0,0.5,0.65)),mspecpower(0),mSpeccolour(Vector3(0.9,0.9,0.0)),mdiffusecolour{Vector3(0.82,0.82,0.82)}
 {
 
 }
 
-#include "Startscreen.h"
+
 void Renderer::Draw()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
-
-	//enable depth buffering 
 
 	glEnable(GL_DEPTH_TEST);
 	
@@ -44,7 +41,7 @@ void Renderer::Draw()
 	//draw walls
 	mwallvertex->SetActive();
 	mWallShader->SetActive();
-	//mWallShader->SetVectorUniform("ucolour", mwallcolour);
+
 	mWallShader->SetMatrixUniform("uviewproj", mview * mproj);
 
 	mwallcolour = Vector3::UnitZ;
@@ -65,7 +62,7 @@ for (auto w : mwalls)
 			
 	}
 glDisable(GL_DEPTH_TEST);
-// Enable alpha blending on the color buffer
+
 glEnable(GL_BLEND);
 glBlendEquationSeparate(GL_FUNC_ADD, GL_FUNC_ADD);
 glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ZERO);
@@ -102,18 +99,18 @@ bool Renderer::Initialize(int screenwidth, int screenheight)
 	mScreenWidth = screenwidth;
 
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-	// Specify version 3.3
+
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
-	// Request a color buffer with 8-bits per RGBA channel
+
 	SDL_GL_SetAttribute(SDL_GL_RED_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
-	// Enable double buffering
+
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-	// Force OpenGL to use hardware acceleration
+
 	SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
 
 	mwindow = SDL_CreateWindow("Mazetime", 100, 100,
@@ -126,10 +123,10 @@ bool Renderer::Initialize(int screenwidth, int screenheight)
 
 
 
-	// Create an OpenGL context
+
 	mcontext = SDL_GL_CreateContext(mwindow);
 
-	// Initialize GLEW
+
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK)
 	{
@@ -139,7 +136,7 @@ bool Renderer::Initialize(int screenwidth, int screenheight)
 
 	glGetError();
 	
-	// Make sure we can create/compile shaders
+	
 	if (!LoadShaders())
 	{
 		SDL_Log("Failed to load shaders.");
@@ -302,8 +299,7 @@ bool Renderer::LoadShaders()
  {
 	 auto iter = std::find(mwalls.begin(), mwalls.end(), x);
 	 mwalls.erase(iter);
-	// std::iter_swap(mwalls.end() - 1, iter);
-	// mwalls.pop_back();
+
  }
 
  void Renderer::makevertexarrays()
@@ -328,12 +324,7 @@ bool Renderer::LoadShaders()
 
  }
 
- void Renderer::AddTile(class Tile* j)
- {
-
-
-	 mtiles.emplace_back(j);
- }
+ 
 
  Vector3 Renderer::GetTrueCentreScreenPos(const Vector3& a)
  {

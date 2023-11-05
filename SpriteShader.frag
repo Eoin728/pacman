@@ -16,5 +16,5 @@ void main()
 
 
 outcolour = texture(utex,fragtex) ;
-//outcolour = vec4(1,0,0,1);
+
 }

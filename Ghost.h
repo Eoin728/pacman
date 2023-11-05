@@ -9,17 +9,15 @@ public:
 	~Ghost();
 	void ActorUpdate(float delta) override;
 	
-	//is this ever used
-	void SetHuntNext(class Tile* x) { mhuntnext = x; }
+	
 	bool IsHunting() { return mishunting; }
-	void SetHunting(bool g) { mishunting = g; }
 
 	class CapsuleComp* GetCapsule() { return mcapsule; }
 protected:
 	
 	class Movement* mmovie;
 
-	//very unsure about this timer hsit it is bad needs to be removed at some point
+
 	void Patrol(float& delta);
 	void Hunt(float delta);
 	void SetFacingDir(Tile* node, Tile* t);

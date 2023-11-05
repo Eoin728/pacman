@@ -129,7 +129,7 @@ void Pacman::ActorUpdate(float)
 {
 	
 	wallhit();
-	//DetectGhosts();
+	
 	//do collisions with ghosts
 	CheckGhostColl();
 
@@ -244,42 +244,4 @@ class Tile* Pacman::GetCurrTile()
 	return GetGame()->GetMaze()->GetTiles()[xxx][yyy];
 
 }
-#include "Tile.h"
-#include <queue>
-#include <iostream>
 
-void Pacman::DetectGhosts()
-{
-	Tile* start = GetCurrTile();
-	std::queue<Tile*> q;
-	std::unordered_map<Tile*, int> pq;
-	pq.emplace(start, 0);
-	q.push(start);
-	
-	bool closed[100][100] = { {false} };
-	closed[start->GetX()][start->GetY()];
-	while (!q.empty() && pq[q.front()] < 5)
-	{
-		start = q.front();
-	
-		q.pop();
-		for (auto adj : start->GetAdjacent())
-		{
-			if (adj->GetGhost())
-			{
-				//adj->GetGhost()->SetHunting(true);
-			}
-			if (!closed[adj->GetX()][adj->GetY()])
-			{
-				pq.emplace(adj, pq[start] + 1);
-				q.push(adj);
-				closed[adj->GetX()][adj->GetY()] = true;
-			}
-		}
-
-
-	}
-	
-	
-
-}

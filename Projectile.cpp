@@ -43,7 +43,7 @@ void Projectile::ActorUpdate(float d)
 		SetState(Actor::EDead);
 	}
 
-	//if it collides with a ghost kill the ghost and itself
+	//if it collides with a ghost destroy the ghost and itself
 	for (auto ghost : GetGame()->GetGhosts())
 	{
 		if (Intersect(msphere->GetSphere(), ghost->GetCapsule()->GetCapsule()))

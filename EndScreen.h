@@ -11,7 +11,7 @@ public:
 	Endscreen(class Game* g,State s);
 	
 
-	//void ProcessInput(const class Input& state) override;
+
 	void Draw(class Shader* s) override;
 
 private:

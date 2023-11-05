@@ -22,8 +22,7 @@ public:
 		class Ghost* GetGhost() { return mghost; }
 
 	void SetCollectible(class Collectible* c) { mcollectible = c; }
-	//debugginh
-	class Collectible* GetCollectible() { return mcollectible; }
+	
 
 	int GetPathCost() { return mpathlen; }
 private:
