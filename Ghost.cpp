@@ -103,7 +103,6 @@ void Ghost::Patrol(float& delta)
 }
 
 
-#include <iostream>
 int Ghost::Range()
 {
 
@@ -111,7 +110,7 @@ int Ghost::Range()
 	struct info
 	{
 		int pathlen;
-		int heuristic = 9999;
+		int heuristic;
 		Tile* prev;
 	};
 
@@ -144,10 +143,10 @@ int Ghost::Range()
 	{
 		
 		curr = pq.top();
-		std::cout <<  mp[curr].pathlen << ' ';
+		
 
 		pq.pop();
-		std::cout <<mp[pq.top()].pathlen << '\n';
+		
 		if (curr == end)
 		{
 			mhuntnext = mp[curr].prev;
