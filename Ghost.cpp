@@ -128,7 +128,7 @@ int Ghost::Range()
 
 	auto calculateheuristic = [end](Tile * other)
 	{
-		return (1);
+		return (Math::Abs(other->GetX() - end->GetX()) + Math::Abs(other->GetY() - end->GetY()));
 	};
 	info x;
 	x.pathlen = 0;
