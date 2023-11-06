@@ -103,7 +103,7 @@ void Ghost::Patrol(float& delta)
 }
 
 
-
+#include <iostream>
 int Ghost::Range()
 {
 
@@ -111,14 +111,14 @@ int Ghost::Range()
 	struct info
 	{
 		int pathlen;
-		int heuristic;
+		int heuristic = 9999;
 		Tile* prev;
 	};
 
 	std::unordered_map<Tile*, info> mp;
 	auto cmp = [&mp](Tile* a, Tile* b)
 	{
-		return mp[a].pathlen > mp[b].pathlen;
+		return mp[a].pathlen + mp[a].heuristic > mp[b].pathlen + mp[b].heuristic;
 	};
 	std::priority_queue< Tile*, std::vector < Tile*>, decltype(cmp)> pq(cmp);
 
@@ -128,6 +128,7 @@ int Ghost::Range()
 
 	auto calculateheuristic = [end](Tile * other)
 	{
+		
 		return (Math::Abs(other->GetX() - end->GetX()) + Math::Abs(other->GetY() - end->GetY()));
 	};
 	info x;
@@ -141,9 +142,12 @@ int Ghost::Range()
 	pq.push(start);
 	while (!pq.empty())
 	{
+		
 		curr = pq.top();
-		pq.pop();
+		std::cout <<  mp[curr].pathlen << ' ';
 
+		pq.pop();
+		std::cout <<mp[pq.top()].pathlen << '\n';
 		if (curr == end)
 		{
 			mhuntnext = mp[curr].prev;
@@ -162,7 +166,7 @@ int Ghost::Range()
 				chkr[adj->GetX()][adj->GetY()] = true;
 				info xx;
 				xx.pathlen = mp[curr].pathlen + 1;
-				x.heuristic = calculateheuristic(adj);
+				xx.heuristic = calculateheuristic(adj);
 				xx.prev = curr;
 				mp.emplace(adj, xx);
 				pq.push(adj);
